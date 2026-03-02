@@ -4962,9 +4962,10 @@ export default function WeddingInvitation() {
                   }}
                 >
                   {/* ↓ Replace with your real Google Maps embed URL ↓ */}
+
                   <iframe
                     title='Venue'
-                    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.0!2d11.2558136!3d43.7695604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403f46f3b63%3A0xd7a3b7a54af41b13!2sFlorence%2C%20Metropolitan%20City%20of%20Florence%2C%20Italy!5e0!3m2!1sen!2sus!4v1700000000000'
+                    src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d244.34491812352195!2d75.6168289!3d11.5146021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68f4d4b6bdf7b%3A0x9a6ba0109a816103!2sExcellent%20Driving%20School%20Payyoli!5e0!3m2!1sen!2sin!4v1772432022196!5m2!1sen!2sin'
                     width='100%'
                     height='340'
                     style={{
@@ -4981,7 +4982,7 @@ export default function WeddingInvitation() {
                 <div style={{ textAlign: 'center', marginTop: 22 }}>
                   {/* ↓ Replace href with your real venue link ↓ */}
                   <a
-                    href='https://maps.google.com/?q=Florence,Italy'
+                    href='https://maps.app.goo.gl/63CnD2jCLCMfYhSB9'
                     target='_blank'
                     rel='noopener noreferrer'
                     style={{
