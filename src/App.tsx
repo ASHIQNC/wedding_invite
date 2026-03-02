@@ -4604,8 +4604,8 @@ export default function WeddingInvitation() {
               {[
                 [
                   '4:00 PM',
-                  'Nikah Ceremony',
-                  'Exchange of vows in the presence of family & Allah',
+                  'Wedding Ceremony',
+                  'Exchange of vows in the garden chapel',
                   '🌸',
                 ],
                 [
