@@ -1,4 +1,4 @@
-// //testing 2
+// // //testing 2
 // import { useState, useEffect, useRef, useCallback } from 'react';
 
 // /* ═══════════════════════════════════════════════════════════
@@ -2211,7 +2211,7 @@
 //           </section>
 
 //           {/* ── GOOGLE MAP ── */}
-//           <section
+//         <section
 //             style={{
 //               position: 'relative',
 //               zIndex: 10,
@@ -2294,42 +2294,64 @@
 //               </p>
 //             </Reveal>
 //             <Reveal delay={0.12} dir='scale'>
-//               <div style={{ maxWidth: 580, margin: '0 auto' }}>
+//               <div style={{ maxWidth: 600, margin: '0 auto' }}>
 //                 <div
 //                   style={{
-//                     borderRadius: 'clamp(16px,4vw,22px)',
+//                     borderRadius: 'clamp(18px,5vw,24px)',
 //                     overflow: 'hidden',
 //                     boxShadow:
-//                       '0 0 0 1px rgba(212,175,112,.22),0 50px 100px rgba(0,0,0,.55)',
+//                       '0 0 0 1px rgba(212,175,112,.25),0 60px 120px rgba(0,0,0,.6),0 0 60px rgba(160,40,80,.12)',
 //                   }}
 //                 >
 //                   {/* ↓ Replace with your real Google Maps embed URL ↓ */}
 //                   <iframe
-//                     src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.34491815865286!2d75.61682888974778!3d11.514602059562883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68f4d4b6bdf7b%3A0x9a6ba0109a816103!2sExcellent%20Driving%20School%20Payyoli!5e0!3m2!1sen!2sin!4v1772427396319!5m2!1sen!2sin'
-//                     width='600'
-//                     height='450'
+//                     title='Venue'
+//                     src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.0!2d11.2558136!3d43.7695604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403f46f3b63%3A0xd7a3b7a54af41b13!2sFlorence%2C%20Metropolitan%20City%20of%20Florence%2C%20Italy!5e0!3m2!1sen!2sus!4v1700000000000'
+//                     width='100%'
+//                     height='340'
+//                     style={{
+//                       border: 0,
+//                       display: 'block',
+//                       filter:
+//                         'hue-rotate(310deg) saturate(.45) brightness(.65)',
+//                     }}
+//                     allowFullScreen
 //                     loading='lazy'
-//                   ></iframe>
+//                     referrerPolicy='no-referrer-when-downgrade'
+//                   />
 //                 </div>
-//                 <div style={{ textAlign: 'center', marginTop: 18 }}>
+//                 <div style={{ textAlign: 'center', marginTop: 22 }}>
 //                   {/* ↓ Replace href with your real venue link ↓ */}
 //                   <a
-//                     href='https://maps.app.goo.gl/3SJwJQKiACeUuJd79'
+//                     href='https://maps.google.com/?q=Florence,Italy'
 //                     target='_blank'
 //                     rel='noopener noreferrer'
 //                     style={{
 //                       display: 'inline-flex',
 //                       alignItems: 'center',
-//                       gap: 8,
-//                       padding: 'clamp(11px,3vw,14px) clamp(22px,6vw,32px)',
+//                       gap: 9,
+//                       padding: 'clamp(13px,3.5vw,16px) clamp(26px,7vw,36px)',
 //                       borderRadius: 50,
 //                       fontFamily: "'Jost',sans-serif",
 //                       fontSize: 'clamp(9px,2.5vw,11px)',
 //                       letterSpacing: '.3em',
 //                       textTransform: 'uppercase',
 //                       color: '#d4af70',
-//                       border: '1px solid rgba(212,175,112,.3)',
+//                       border: '1px solid rgba(212,175,112,.32)',
 //                       textDecoration: 'none',
+//                       transition: 'all .3s ease',
+//                       background: 'rgba(212,175,112,.04)',
+//                     }}
+//                     onMouseEnter={(e) => {
+//                       e.currentTarget.style.background =
+//                         'rgba(212,175,112,.12)';
+//                       e.currentTarget.style.boxShadow =
+//                         '0 0 30px rgba(212,175,112,.18)';
+//                     }}
+//                     onMouseLeave={(e) => {
+//                       e.currentTarget.style.background =
+//                         'rgba(212,175,112,.04)';
+//                       e.currentTarget.style.boxShadow = 'none';
 //                     }}
 //                   >
 //                     <svg
