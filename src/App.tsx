@@ -1,4 +1,5 @@
 // // //testing 2
+//testing 3
 // import { useState, useEffect, useRef, useCallback } from 'react';
 
 // /* ═══════════════════════════════════════════════════════════
@@ -40,7 +41,7 @@
 //   }, []);
 //   return [ref, on];
 // }
-// function Reveal({ children, delay = 0, dir = 'up', className = '' }) {
+// function Reveal({ children, delay = 0, dir = 'up', className = '' }: any) {
 //   const [ref, on] = useReveal();
 //   const t = {
 //     up: on ? 'translateY(0)' : 'translateY(52px)',
@@ -242,7 +243,7 @@
 // /* ═══════════════════════════════════════════════════════════
 //    COUNTDOWN
 // ═══════════════════════════════════════════════════════════ */
-// function Countdown({ targetDate }) {
+// function Countdown({ targetDate }: any) {
 //   const [time, setTime] = useState({ d: 0, h: 0, m: 0, s: 0 });
 //   useEffect(() => {
 //     const tick = () => {
@@ -674,6 +675,8 @@
 //         .shimmer{animation:shimmer 3s ease-in-out infinite}
 //         .card-float{animation:cardFloat 5s ease-in-out infinite}
 //         ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:#d4af70;border-radius:2px}
+//         .story-card-cell{width:100%;display:flex;flex-direction:column;}
+//         .story-card-cell > div{flex:1;}
 //         @media(max-width:400px){html{font-size:14px}}
 //       `}</style>
 
@@ -1329,22 +1332,31 @@
 //             {/* GROOM — textTransform uppercase forces capital A */}
 //             <div
 //               ref={groomRef}
-//               style={{ opacity: 0, clipPath: 'inset(0 100% 0 0)' }}
+//               style={{
+//                 opacity: 0,
+//                 clipPath: 'inset(0 100% 0 0)',
+//                 width: '100%',
+//                 textAlign: 'center',
+//               }}
 //             >
 //               <h1
 //                 style={{
 //                   fontFamily: "'Great Vibes',cursive",
-//                   fontSize: 'clamp(72px,22vw,130px)',
+//                   fontSize: 'clamp(52px,14vw,130px)',
 //                   color: '#f8dde8',
 //                   textShadow:
 //                     '0 0 100px rgba(210,80,120,.65),0 0 40px rgba(210,80,120,.3),0 6px 32px rgba(0,0,0,.65)',
-//                   lineHeight: 1.05,
+//                   lineHeight: 1.5,
 //                   margin: 0,
-//                   textTransform: 'capitalize',
+
 //                   letterSpacing: 2,
+//                   whiteSpace: 'nowrap',
+//                   overflow: 'hidden',
+//                   textOverflow: 'ellipsis',
+//                   maxWidth: '100%',
 //                 }}
 //               >
-//                 Ashiq Rahman
+//                 Ashiq rahman
 //               </h1>
 //               <p
 //                 style={{
@@ -1385,21 +1397,30 @@
 //             {/* BRIDE */}
 //             <div
 //               ref={brideRef}
-//               style={{ opacity: 0, clipPath: 'inset(0 0% 0 100%)' }}
+//               style={{
+//                 opacity: 0,
+//                 clipPath: 'inset(0 0% 0 100%)',
+//                 width: '100%',
+//                 textAlign: 'center',
+//               }}
 //             >
 //               <h1
 //                 style={{
 //                   fontFamily: "'Great Vibes',cursive",
-//                   fontSize: 'clamp(72px,22vw,130px)',
+//                   fontSize: 'clamp(52px,14vw,130px)',
 //                   color: '#f8dde8',
 //                   textShadow:
 //                     '0 0 100px rgba(210,80,120,.65),0 0 40px rgba(210,80,120,.3),0 6px 32px rgba(0,0,0,.65)',
-//                   lineHeight: 1.05,
+//                   lineHeight: 1.5,
 //                   margin: 0,
 //                   letterSpacing: 2,
+//                   whiteSpace: 'nowrap',
+//                   overflow: 'hidden',
+//                   textOverflow: 'ellipsis',
+//                   maxWidth: '100%',
 //                 }}
 //               >
-//                 Shamida
+//                 shamida
 //               </h1>
 //               <p
 //                 style={{
@@ -1685,7 +1706,7 @@
 //                     marginTop: 0,
 //                   }}
 //                 >
-//                   The Grand Ballroom at Villa
+//                   The Grand Ballroom at Villa Nediyachalil
 //                 </p>
 //                 <p
 //                   style={{
@@ -1702,7 +1723,7 @@
 //                 <div style={{ margin: '22px 0' }}>
 //                   <GoldLine w={44} />
 //                 </div>
-//                 <div
+//                 {/* <div
 //                   style={{ display: 'flex', justifyContent: 'space-around' }}
 //                 >
 //                   {[
@@ -1735,7 +1756,7 @@
 //                       </p>
 //                     </div>
 //                   ))}
-//                 </div>
+//                 </div> */}
 //               </div>
 //             </Reveal>
 //           </section>
@@ -1816,7 +1837,7 @@
 //                   marginTop: 0,
 //                 }}
 //               >
-//                 Until we say "I do"
+//                 Until the blessed day
 //               </p>
 //             </Reveal>
 //             <Reveal delay={0.15}>
@@ -1873,9 +1894,11 @@
 //                     margin: '16px 0',
 //                   }}
 //                 >
-//                   Two souls with but a single thought,
+//                   And among His signs is that He created for you mates from
+//                   among yourselves, that you may dwell in tranquility with them,
+//                   and He placed love and mercy between you.
 //                   <br />
-//                   two hearts that beat as one.
+//                   <br />— Surah Ar-Rum, 30:21
 //                 </p>
 //                 <div
 //                   style={{
@@ -1936,7 +1959,7 @@
 //                     whiteSpace: 'nowrap',
 //                   }}
 //                 >
-//                   🕯️ &nbsp; The Day's Events
+//                   🤲 &nbsp; The Day's Events
 //                 </span>
 //                 <div
 //                   style={{
@@ -1959,20 +1982,20 @@
 //                 ],
 //                 [
 //                   '5:30 PM',
-//                   'Family Gathering ',
-//                   'warm greetings & blessings',
+//                   'Family Gathering',
+//                   'Warm greetings, blessings & cherished moments with loved ones',
 //                   '🤲',
 //                 ],
 //                 [
 //                   '7:00 PM',
-//                   'Dinner Reception',
-//                   'Five-course candlelit dinner',
-//                   '🕯️',
+//                   'Walima Dinner',
+//                   'A traditional feast — come hungry, leave with full hearts',
+//                   '🍽️',
 //                 ],
 //                 [
 //                   '9:00 PM',
-//                   'Dancing & Celebration',
-//                   'Live orchestra until midnight',
+//                   'Celebration & Duas',
+//                   'Heartfelt prayers, joy and blessings for the couple',
 //                   '✨',
 //                 ],
 //               ].map(([time, title, desc, icon], i) => (
@@ -2123,10 +2146,12 @@
 //             </Reveal>
 //             <div
 //               style={{
-//                 display: 'flex',
+//                 display: 'grid',
+//                 gridTemplateColumns: '1fr 1fr',
 //                 gap: 'clamp(12px,3.5vw,20px)',
-//                 maxWidth: 460,
+//                 maxWidth: 500,
 //                 margin: '0 auto',
+//                 width: '100%',
 //               }}
 //             >
 //               {[
@@ -2140,7 +2165,7 @@
 //                   label: 'Engaged',
 //                   // year: '2025',
 //                   icon: '💍',
-//                   desc: 'We said yes',
+//                   desc: 'He said yes',
 //                 },
 //                 {
 //                   label: 'Forever',
@@ -2149,10 +2174,15 @@
 //                   desc: 'A new chapter',
 //                 },
 //               ].map(({ label, year, icon, desc }, i) => (
-//                 <Reveal key={i} delay={i * 0.14} dir='scale'>
+//                 <Reveal
+//                   key={i}
+//                   delay={i * 0.14}
+//                   dir='scale'
+//                   className='story-card-cell'
+//                 >
 //                   <div
 //                     style={{
-//                       flex: 1,
+//                       width: '100%',
 //                       borderRadius: 'clamp(16px,5vw,22px)',
 //                       padding: 'clamp(20px,6vw,30px) clamp(12px,3.5vw,18px)',
 //                       textAlign: 'center',
@@ -2211,7 +2241,7 @@
 //           </section>
 
 //           {/* ── GOOGLE MAP ── */}
-//         <section
+//           <section
 //             style={{
 //               position: 'relative',
 //               zIndex: 10,
@@ -2277,7 +2307,7 @@
 //                   marginTop: 0,
 //                 }}
 //               >
-//                 Villa Rosa Ballroom
+//                 Villa Nediyachalil
 //               </p>
 //               <p
 //                 style={{
@@ -2304,9 +2334,10 @@
 //                   }}
 //                 >
 //                   {/* ↓ Replace with your real Google Maps embed URL ↓ */}
+
 //                   <iframe
 //                     title='Venue'
-//                     src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.0!2d11.2558136!3d43.7695604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403f46f3b63%3A0xd7a3b7a54af41b13!2sFlorence%2C%20Metropolitan%20City%20of%20Florence%2C%20Italy!5e0!3m2!1sen!2sus!4v1700000000000'
+//                     src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d244.34491812352195!2d75.6168289!3d11.5146021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68f4d4b6bdf7b%3A0x9a6ba0109a816103!2sExcellent%20Driving%20School%20Payyoli!5e0!3m2!1sen!2sin!4v1772432022196!5m2!1sen!2sin'
 //                     width='100%'
 //                     height='340'
 //                     style={{
@@ -2323,7 +2354,7 @@
 //                 <div style={{ textAlign: 'center', marginTop: 22 }}>
 //                   {/* ↓ Replace href with your real venue link ↓ */}
 //                   <a
-//                     href='https://maps.google.com/?q=Florence,Italy'
+//                     href='https://maps.app.goo.gl/63CnD2jCLCMfYhSB9'
 //                     target='_blank'
 //                     rel='noopener noreferrer'
 //                     style={{
@@ -2581,7 +2612,7 @@
 //                   justifyContent: 'center',
 //                   gap: 14,
 //                   marginBottom: 20,
-//                   opacity: 0.15,
+//                   opacity: 0.45,
 //                 }}
 //               >
 //                 <RoseIcon s={26} op={1} />
@@ -2592,11 +2623,11 @@
 //                 style={{
 //                   fontFamily: "'Great Vibes',cursive",
 //                   fontSize: 'clamp(30px,10vw,42px)',
-//                   color: 'rgba(212,175,112,.28)',
+//                   color: 'rgba(212,175,112,.71)',
 //                   margin: '0 0 10px',
 //                 }}
 //               >
-//                 Ashiq &amp; Shamida
+//                 Ashiq &amp; shamida
 //               </p>
 //               <div
 //                 style={{
@@ -2613,7 +2644,7 @@
 //                   fontSize: 'clamp(9px,2.5vw,11px)',
 //                   letterSpacing: '.5em',
 //                   textTransform: 'uppercase',
-//                   color: 'rgba(212,175,112,.18)',
+//                   color: 'rgba(212,175,112,.71)',
 //                   margin: 0,
 //                 }}
 //               >
@@ -2627,7 +2658,7 @@
 //   );
 // }
 
-//testing 3
+//tesing 4 with some more animation
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 /* ═══════════════════════════════════════════════════════════
@@ -2648,9 +2679,6 @@ function useAnime() {
   return anime;
 }
 
-/* ═══════════════════════════════════════════════════════════
-   SCROLL REVEAL
-═══════════════════════════════════════════════════════════ */
 function useReveal(threshold = 0.12) {
   const ref = useRef(null);
   const [on, setOn] = useState(false);
@@ -2693,9 +2721,6 @@ function Reveal({ children, delay = 0, dir = 'up', className = '' }: any) {
   );
 }
 
-/* ═══════════════════════════════════════════════════════════
-   SMALL DECORATIVES
-═══════════════════════════════════════════════════════════ */
 const Diamond = ({ size = 8, color = '#d4af70', opacity = 0.5 }) => (
   <div
     style={{
@@ -2794,9 +2819,6 @@ const RoseIcon = ({ s = 44, op = 0.22 }) => (
   </svg>
 );
 
-/* ═══════════════════════════════════════════════════════════
-   FLOATING PETALS
-═══════════════════════════════════════════════════════════ */
 function Petals() {
   const [items] = useState(() =>
     Array.from({ length: 22 }).map((_, i) => ({
@@ -2868,9 +2890,6 @@ function Petals() {
   );
 }
 
-/* ═══════════════════════════════════════════════════════════
-   COUNTDOWN
-═══════════════════════════════════════════════════════════ */
 function Countdown({ targetDate }: any) {
   const [time, setTime] = useState({ d: 0, h: 0, m: 0, s: 0 });
   useEffect(() => {
@@ -2880,17 +2899,17 @@ function Countdown({ targetDate }: any) {
         setTime({ d: 0, h: 0, m: 0, s: 0 });
         return;
       }
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      setTime({ d, h, m, s });
+      setTime({
+        d: Math.floor(diff / 86400000),
+        h: Math.floor((diff % 86400000) / 3600000),
+        m: Math.floor((diff % 3600000) / 60000),
+        s: Math.floor((diff % 60000) / 1000),
+      });
     };
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
   }, [targetDate]);
-
   return (
     <div
       style={{
@@ -2920,10 +2939,9 @@ function Countdown({ targetDate }: any) {
                 'linear-gradient(145deg,rgba(100,24,42,.6),rgba(55,12,24,.8))',
               border: '1px solid rgba(212,175,112,.28)',
               boxShadow:
-                '0 20px 50px rgba(0,0,0,.45), 0 0 40px rgba(160,40,80,.1), inset 0 1px 0 rgba(255,255,255,.05)',
+                '0 20px 50px rgba(0,0,0,.45),0 0 40px rgba(160,40,80,.1),inset 0 1px 0 rgba(255,255,255,.05)',
             }}
           >
-            {/* inner top glow */}
             <div
               style={{
                 position: 'absolute',
@@ -2976,9 +2994,6 @@ function Countdown({ targetDate }: any) {
   );
 }
 
-/* ═══════════════════════════════════════════════════════════
-   WAX SEAL SVG
-═══════════════════════════════════════════════════════════ */
 function WaxSeal({ sealRef }) {
   return (
     <div
@@ -3088,14 +3103,634 @@ function WaxSeal({ sealRef }) {
 }
 
 /* ═══════════════════════════════════════════════════════════
+   RSVP CELEBRATION SECTION
+═══════════════════════════════════════════════════════════ */
+function RSVPSection({ anime }) {
+  const [phase, setPhase] = useState<'idle' | 'accepted' | 'declined'>('idle');
+  const burstRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const msgRef = useRef<HTMLDivElement>(null);
+
+  const fireParticles = useCallback(
+    (accepted: boolean) => {
+      if (!anime || !burstRef.current) return;
+      const container = burstRef.current;
+
+      const goldColors = [
+        '#d4af70',
+        '#f5de8a',
+        '#f0c8d0',
+        '#e8a0b8',
+        '#d4607a',
+        '#fff4cc',
+        '#ffd700',
+        '#ffb6c1',
+        '#ff9eb5',
+        '#ffe066',
+      ];
+      const greyColors = [
+        '#9090aa',
+        '#a0a0c0',
+        '#8090b0',
+        '#c0b0c0',
+        '#b0b8cc',
+      ];
+      const colors = accepted ? goldColors : greyColors;
+
+      // Big burst — 80 particles
+      Array.from({ length: 80 }).forEach((_, i) => {
+        const el = document.createElement('div');
+        const size = accepted ? 5 + Math.random() * 12 : 4 + Math.random() * 8;
+        const shapes = ['50%', '0%', '30%'];
+        el.style.cssText = `position:absolute;top:0;left:0;width:${size}px;height:${size}px;border-radius:${shapes[i % 3]};background:${colors[i % colors.length]};pointer-events:none;will-change:transform,opacity;`;
+        container.appendChild(el);
+        const angle = (i / 80) * 360 + Math.random() * 10;
+        const dist = accepted
+          ? 80 + Math.random() * 260
+          : 40 + Math.random() * 130;
+        anime({
+          targets: el,
+          translateX: [0, Math.cos((angle * Math.PI) / 180) * dist],
+          translateY: [
+            0,
+            Math.sin((angle * Math.PI) / 180) * dist - (accepted ? 60 : 20),
+          ],
+          rotate: [0, Math.random() * 720 - 360],
+          scale: [
+            { value: 1.4, duration: 60 },
+            {
+              value: 0,
+              duration: accepted
+                ? 1200 + Math.random() * 600
+                : 800 + Math.random() * 300,
+            },
+          ],
+          opacity: [1, 0],
+          easing: 'easeOutCubic',
+          delay: i * 8,
+          complete: () => el.remove(),
+        });
+      });
+
+      if (accepted) {
+        // Expanding ring waves
+        [0, 200, 400].forEach((delay, r) => {
+          const ring = document.createElement('div');
+          ring.style.cssText = `position:absolute;top:0;left:0;width:4px;height:4px;border-radius:50%;border:2px solid rgba(212,175,112,0.9);pointer-events:none;`;
+          container.appendChild(ring);
+          anime({
+            targets: ring,
+            scale: [0, 60 + r * 20],
+            opacity: [1, 0],
+            duration: 1200,
+            easing: 'easeOutExpo',
+            delay,
+            complete: () => ring.remove(),
+          });
+        });
+
+        // Upward floating hearts/stars
+        ['🌹', '✨', '💍', '🌸', '⭐', '💖', '🌺', '✨'].forEach((emoji, i) => {
+          const el = document.createElement('div');
+          el.textContent = emoji;
+          el.style.cssText = `position:absolute;top:0;left:0;font-size:${16 + Math.random() * 14}px;pointer-events:none;user-select:none;`;
+          container.appendChild(el);
+          const spreadX = (Math.random() - 0.5) * 220;
+          anime({
+            targets: el,
+            translateX: [0, spreadX],
+            translateY: [0, -(120 + Math.random() * 180)],
+            rotate: [(Math.random() - 0.5) * 30, (Math.random() - 0.5) * 60],
+            opacity: [1, 0],
+            scale: [0.5, 1.2, 0.3],
+            duration: 1800 + Math.random() * 800,
+            easing: 'easeOutCubic',
+            delay: 100 + i * 80,
+            complete: () => el.remove(),
+          });
+        });
+      }
+    },
+    [anime],
+  );
+
+  const handleAccept = useCallback(() => {
+    if (!anime || phase !== 'idle') return;
+    // Flash the card
+    if (cardRef.current) {
+      anime({
+        targets: cardRef.current,
+        scale: [1, 1.04, 1],
+        duration: 400,
+        easing: 'easeOutBack',
+      });
+    }
+    fireParticles(true);
+    setTimeout(() => setPhase('accepted'), 120);
+    // Animate message in
+    setTimeout(() => {
+      if (msgRef.current) {
+        anime({
+          targets: msgRef.current,
+          opacity: [0, 1],
+          translateY: [30, 0],
+          duration: 900,
+          easing: 'easeOutExpo',
+        });
+      }
+    }, 200);
+  }, [anime, phase, fireParticles]);
+
+  const handleDecline = useCallback(() => {
+    if (!anime || phase !== 'idle') return;
+    if (cardRef.current) {
+      anime({
+        targets: cardRef.current,
+        translateX: [0, -8, 8, -5, 5, 0],
+        duration: 400,
+        easing: 'easeInOutSine',
+      });
+    }
+    fireParticles(false);
+    setTimeout(() => setPhase('declined'), 120);
+    setTimeout(() => {
+      if (msgRef.current) {
+        anime({
+          targets: msgRef.current,
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 800,
+          easing: 'easeOutExpo',
+        });
+      }
+    }, 200);
+  }, [anime, phase, fireParticles]);
+
+  return (
+    <section
+      style={{
+        position: 'relative',
+        zIndex: 10,
+        width: '100vw',
+        boxSizing: 'border-box',
+        padding: 'clamp(70px,15vw,110px) 20px',
+        textAlign: 'center',
+        background:
+          'linear-gradient(180deg,rgba(20,5,14,0.65) 0%,rgba(70,16,40,0.4) 50%,rgba(20,5,14,0.65) 100%)',
+      }}
+    >
+      {/* Burst origin — centered in card */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          pointerEvents: 'none',
+          zIndex: 100,
+        }}
+      >
+        <div
+          ref={burstRef}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            pointerEvents: 'none',
+          }}
+        />
+      </div>
+
+      <Reveal>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 14,
+            marginBottom: 44,
+          }}
+        >
+          <div
+            style={{
+              height: 1,
+              flex: 1,
+              maxWidth: 70,
+              background:
+                'linear-gradient(to right,transparent,rgba(212,175,112,.45))',
+            }}
+          />
+          <span
+            style={{
+              fontFamily: "'Jost',sans-serif",
+              fontSize: 'clamp(9px,2.5vw,11px)',
+              letterSpacing: '.5em',
+              textTransform: 'uppercase',
+              color: 'rgba(212,175,112,.75)',
+              padding: '7px 18px',
+              border: '1px solid rgba(212,175,112,.3)',
+              borderRadius: 50,
+              background: 'rgba(212,175,112,.06)',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {phase === 'idle'
+              ? '💌\u00a0\u00a0RSVP'
+              : phase === 'accepted'
+                ? "🌹\u00a0\u00a0We're Overjoyed"
+                : '🤍\u00a0\u00a0With Love'}
+          </span>
+          <div
+            style={{
+              height: 1,
+              flex: 1,
+              maxWidth: 70,
+              background:
+                'linear-gradient(to left,transparent,rgba(212,175,112,.45))',
+            }}
+          />
+        </div>
+      </Reveal>
+
+      <Reveal dir='scale'>
+        <div
+          ref={cardRef}
+          style={{
+            maxWidth: 420,
+            margin: '0 auto',
+            borderRadius: 'clamp(20px,6vw,30px)',
+            padding: 'clamp(36px,10vw,60px) clamp(24px,8vw,48px)',
+            background:
+              'linear-gradient(145deg,rgba(100,24,42,.65),rgba(55,12,24,.85))',
+            border: `1px solid ${phase === 'accepted' ? 'rgba(212,175,112,.55)' : phase === 'declined' ? 'rgba(150,150,180,.3)' : 'rgba(212,175,112,.26)'}`,
+            boxShadow: `0 0 120px rgba(140,30,65,.3),0 70px 140px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04)${phase === 'accepted' ? ',0 0 80px rgba(212,175,112,.25)' : ''}`,
+            position: 'relative',
+            overflow: 'hidden',
+            transition: 'border .5s,box-shadow .5s',
+            animation:
+              phase === 'accepted'
+                ? 'glowPulse 2.5s ease-in-out infinite'
+                : undefined,
+          }}
+        >
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background:
+                'radial-gradient(ellipse at 50% 0%,rgba(200,70,100,.2) 0%,transparent 62%)',
+              pointerEvents: 'none',
+            }}
+          />
+
+          {/* ── IDLE ── */}
+          {phase === 'idle' && (
+            <>
+              <p
+                style={{
+                  fontFamily: "'Jost',sans-serif",
+                  fontSize: 'clamp(9px,2.5vw,10px)',
+                  letterSpacing: '.45em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(212,175,112,.5)',
+                  marginBottom: 14,
+                  marginTop: 0,
+                }}
+              >
+                Kindly Reply
+              </p>
+              <h3
+                style={{
+                  fontFamily: "'Great Vibes',cursive",
+                  fontSize: 'clamp(42px,13vw,60px)',
+                  color: '#f8dde8',
+                  textShadow: '0 0 60px rgba(200,80,120,.5)',
+                  lineHeight: 1.1,
+                  margin: '0 0 20px',
+                }}
+              >
+                Will you
+                <br />
+                join us?
+              </h3>
+              <div style={{ margin: '18px 0' }}>
+                <GoldLine w={36} />
+              </div>
+              <p
+                style={{
+                  fontFamily: "'Jost',sans-serif",
+                  fontSize: 'clamp(10px,3vw,13px)',
+                  fontWeight: 300,
+                  color: 'rgba(212,175,112,.4)',
+                  letterSpacing: '.1em',
+                  marginBottom: 32,
+                  marginTop: 0,
+                }}
+              >
+                We'd love to celebrate with you
+              </p>
+              <div
+                style={{ display: 'flex', flexDirection: 'column', gap: 14 }}
+              >
+                <button
+                  onClick={handleAccept}
+                  style={{
+                    width: '100%',
+                    padding: 'clamp(15px,4.5vw,19px)',
+                    borderRadius: 50,
+                    fontFamily: "'Jost',sans-serif",
+                    fontSize: 'clamp(10px,3vw,12px)',
+                    letterSpacing: '.32em',
+                    textTransform: 'uppercase',
+                    fontWeight: 500,
+                    background:
+                      'linear-gradient(135deg,#c8a44a,#f0d485,#c8a44a)',
+                    color: '#3a2010',
+                    border: 'none',
+                    cursor: 'pointer',
+                    boxShadow: '0 14px 40px rgba(212,175,112,.32)',
+                    transition: 'transform .2s,box-shadow .2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform =
+                      'translateY(-3px) scale(1.02)';
+                    e.currentTarget.style.boxShadow =
+                      '0 22px 55px rgba(212,175,112,.5)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'none';
+                    e.currentTarget.style.boxShadow =
+                      '0 14px 40px rgba(212,175,112,.32)';
+                  }}
+                  onTouchStart={(e) =>
+                    (e.currentTarget.style.transform = 'scale(.97)')
+                  }
+                  onTouchEnd={(e) => (e.currentTarget.style.transform = 'none')}
+                >
+                  ✦ Joyfully Accept ✦
+                </button>
+                <button
+                  onClick={handleDecline}
+                  style={{
+                    width: '100%',
+                    padding: 'clamp(15px,4.5vw,19px)',
+                    borderRadius: 50,
+                    fontFamily: "'Jost',sans-serif",
+                    fontSize: 'clamp(10px,3vw,12px)',
+                    letterSpacing: '.32em',
+                    textTransform: 'uppercase',
+                    background: 'transparent',
+                    color: 'rgba(212,175,112,.45)',
+                    border: '1px solid rgba(212,175,112,.2)',
+                    cursor: 'pointer',
+                    transition: 'background .25s',
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.background = 'rgba(212,175,112,.08)')
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.background = 'transparent')
+                  }
+                >
+                  Regretfully Decline
+                </button>
+              </div>
+            </>
+          )}
+
+          {/* ── ACCEPTED ── */}
+          {phase === 'accepted' && (
+            <div ref={msgRef} style={{ opacity: 0 }}>
+              {/* Animated ring + heart */}
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginBottom: 22,
+                }}
+              >
+                <div style={{ position: 'relative', width: 96, height: 96 }}>
+                  <svg
+                    viewBox='0 0 96 96'
+                    width='96'
+                    height='96'
+                    style={{ position: 'absolute', inset: 0 }}
+                  >
+                    <circle
+                      cx='48'
+                      cy='48'
+                      r='44'
+                      fill='none'
+                      stroke='rgba(212,175,112,.15)'
+                      strokeWidth='2'
+                    />
+                    <circle
+                      cx='48'
+                      cy='48'
+                      r='44'
+                      fill='none'
+                      stroke='url(#goldGrad)'
+                      strokeWidth='2.5'
+                      strokeLinecap='round'
+                      strokeDasharray='276'
+                      strokeDashoffset='276'
+                      style={{
+                        animation: 'circleReveal 1.2s ease .1s forwards',
+                        transformOrigin: 'center',
+                        transform: 'rotate(-90deg)',
+                      }}
+                    />
+                    <defs>
+                      <linearGradient
+                        id='goldGrad'
+                        x1='0%'
+                        y1='0%'
+                        x2='100%'
+                        y2='100%'
+                      >
+                        <stop offset='0%' stopColor='#c8a44a' />
+                        <stop offset='100%' stopColor='#f5de8a' />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: 36,
+                      animation:
+                        'popIn .6s cubic-bezier(.34,1.56,.64,1) .4s both',
+                    }}
+                  >
+                    🌹
+                  </div>
+                </div>
+              </div>
+
+              <h3
+                style={{
+                  fontFamily: "'Great Vibes',cursive",
+                  fontSize: 'clamp(36px,11vw,54px)',
+                  color: '#f8dde8',
+                  textShadow: '0 0 80px rgba(200,80,120,.7)',
+                  lineHeight: 1.15,
+                  margin: '0 0 14px',
+                }}
+              >
+                We're so happy!
+              </h3>
+              <div style={{ margin: '14px 0' }}>
+                <GoldLine w={36} />
+              </div>
+              <p
+                style={{
+                  fontFamily: "'Cormorant Garamond',serif",
+                  fontSize: 'clamp(15px,4.5vw,19px)',
+                  fontStyle: 'italic',
+                  color: 'rgba(255,210,190,.7)',
+                  lineHeight: 1.9,
+                  margin: '0 0 18px',
+                }}
+              >
+                Your presence will make our day
+                <br />
+                truly unforgettable. ✨
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Jost',sans-serif",
+                  fontSize: 'clamp(9px,2.5vw,11px)',
+                  letterSpacing: '.35em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(212,175,112,.45)',
+                  marginBottom: 24,
+                  marginTop: 0,
+                }}
+              >
+                April 5, 2026 · 4:00 PM
+              </p>
+
+              {/* Floating emoji row */}
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  gap: 'clamp(10px,3vw,18px)',
+                  fontSize: 'clamp(18px,5vw,24px)',
+                  marginBottom: 28,
+                }}
+              >
+                {['🌸', '💍', '🌹', '✨', '🤲'].map((e, i) => (
+                  <span
+                    key={i}
+                    style={{
+                      display: 'inline-block',
+                      animation: `floatBob 2.2s ease-in-out ${i * 0.18}s infinite`,
+                    }}
+                  >
+                    {e}
+                  </span>
+                ))}
+              </div>
+
+              <button
+                onClick={() => setPhase('idle')}
+                style={{
+                  padding: '10px 28px',
+                  borderRadius: 50,
+                  fontFamily: "'Jost',sans-serif",
+                  fontSize: 'clamp(8px,2.2vw,10px)',
+                  letterSpacing: '.3em',
+                  textTransform: 'uppercase',
+                  background: 'transparent',
+                  color: 'rgba(212,175,112,.3)',
+                  border: '1px solid rgba(212,175,112,.12)',
+                  cursor: 'pointer',
+                }}
+              >
+                ← Go back
+              </button>
+            </div>
+          )}
+
+          {/* ── DECLINED ── */}
+          {phase === 'declined' && (
+            <div ref={msgRef} style={{ opacity: 0 }}>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginBottom: 20,
+                  fontSize: 'clamp(42px,14vw,58px)',
+                  animation: 'popIn .7s cubic-bezier(.34,1.56,.64,1) .1s both',
+                }}
+              >
+                🤍
+              </div>
+              <h3
+                style={{
+                  fontFamily: "'Great Vibes',cursive",
+                  fontSize: 'clamp(32px,10vw,50px)',
+                  color: '#f8dde8',
+                  textShadow: '0 0 40px rgba(180,150,200,.4)',
+                  lineHeight: 1.2,
+                  margin: '0 0 14px',
+                }}
+              >
+                You'll be missed
+              </h3>
+              <div style={{ margin: '14px 0' }}>
+                <GoldLine w={36} />
+              </div>
+              <p
+                style={{
+                  fontFamily: "'Cormorant Garamond',serif",
+                  fontSize: 'clamp(15px,4.5vw,18px)',
+                  fontStyle: 'italic',
+                  color: 'rgba(255,210,190,.6)',
+                  lineHeight: 1.9,
+                  margin: '0 0 26px',
+                }}
+              >
+                We understand completely.
+                <br />
+                You'll be in our hearts & duas. 🤍
+              </p>
+              <button
+                onClick={() => setPhase('idle')}
+                style={{
+                  padding: 'clamp(12px,3.5vw,15px) clamp(22px,6vw,32px)',
+                  borderRadius: 50,
+                  fontFamily: "'Jost',sans-serif",
+                  fontSize: 'clamp(9px,2.5vw,11px)',
+                  letterSpacing: '.28em',
+                  textTransform: 'uppercase',
+                  background: 'linear-gradient(135deg,#c8a44a,#f0d485,#c8a44a)',
+                  color: '#3a2010',
+                  border: 'none',
+                  cursor: 'pointer',
+                  boxShadow: '0 10px 30px rgba(212,175,112,.25)',
+                }}
+              >
+                ← Change my mind
+              </button>
+            </div>
+          )}
+        </div>
+      </Reveal>
+    </section>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════
    MAIN APP
 ═══════════════════════════════════════════════════════════ */
 export default function WeddingInvitation() {
   const anime = useAnime();
   const [opened, setOpened] = useState(false);
-  const [cardPhase, setCardPhase] = useState('idle'); // idle | opening | done
-
-  // refs for anime targets
+  const [cardPhase, setCardPhase] = useState('idle');
   const cardRef = useRef(null);
   const leftPageRef = useRef(null);
   const rightPageRef = useRef(null);
@@ -3107,7 +3742,6 @@ export default function WeddingInvitation() {
   const brideRef = useRef(null);
   const ampRef = useRef(null);
 
-  // ── Hero entrance animation ──────────────────────────────
   useEffect(() => {
     if (!anime || !heroRef.current) return;
     anime({
@@ -3118,8 +3752,6 @@ export default function WeddingInvitation() {
       easing: 'easeOutExpo',
     });
   }, [anime]);
-
-  // ── Seal pulse loop ──────────────────────────────────────
   useEffect(() => {
     if (!anime || !sealRef.current) return;
     anime({
@@ -3132,7 +3764,6 @@ export default function WeddingInvitation() {
     });
   }, [anime]);
 
-  // ── Spawn burst particles ────────────────────────────────
   const spawnParticles = useCallback(() => {
     if (!anime || !particleContainerRef.current) return;
     const container = particleContainerRef.current;
@@ -3151,12 +3782,10 @@ export default function WeddingInvitation() {
       container.appendChild(el);
       const angle = (i / 36) * 360,
         dist = 80 + Math.random() * 160;
-      const tx = Math.cos((angle * Math.PI) / 180) * dist;
-      const ty = Math.sin((angle * Math.PI) / 180) * dist;
       anime({
         targets: el,
-        translateX: [0, tx],
-        translateY: [0, ty],
+        translateX: [0, Math.cos((angle * Math.PI) / 180) * dist],
+        translateY: [0, Math.sin((angle * Math.PI) / 180) * dist],
         rotate: [0, 360 + Math.random() * 360],
         scale: [1, 0],
         opacity: [1, 0],
@@ -3168,12 +3797,9 @@ export default function WeddingInvitation() {
     });
   }, [anime]);
 
-  // ── Open card ────────────────────────────────────────────
   const handleOpenCard = useCallback(() => {
     if (!anime || cardPhase !== 'idle') return;
     setCardPhase('opening');
-
-    // 1. Seal shake + scale out
     anime({
       targets: sealRef.current,
       rotate: [0, -12, 10, -6, 4, 0],
@@ -3190,23 +3816,19 @@ export default function WeddingInvitation() {
       });
       spawnParticles();
     }, 380);
-
-    // 2. Left page flips open (book-open)
     setTimeout(() => {
       anime({
         targets: leftPageRef.current,
         rotateY: [0, -185],
         duration: 1000,
-        easing: 'cubicBezier(0.45, 0, 0.2, 1)',
+        easing: 'cubicBezier(0.45,0,0.2,1)',
       });
-      // right page slight depth
       anime({
         targets: rightPageRef.current,
         rotateY: [0, 8, 0],
         duration: 1000,
         easing: 'easeInOutCubic',
       });
-      // whole card lifts
       anime({
         targets: cardRef.current,
         scale: [1, 1.03, 1],
@@ -3214,8 +3836,6 @@ export default function WeddingInvitation() {
         easing: 'easeInOutQuad',
       });
     }, 600);
-
-    // 3. Fade card away, reveal names
     setTimeout(() => {
       anime({
         targets: cardRef.current,
@@ -3240,11 +3860,10 @@ export default function WeddingInvitation() {
     }, 1500);
   }, [anime, cardPhase, spawnParticles]);
 
-  // ── Names reveal with anime ──────────────────────────────
   useEffect(() => {
     if (!opened || !anime) return;
     setTimeout(() => {
-      if (groomRef.current) {
+      if (groomRef.current)
         anime({
           targets: groomRef.current,
           clipPath: ['inset(0 100% 0 0)', 'inset(0 0% 0 0)'],
@@ -3253,8 +3872,7 @@ export default function WeddingInvitation() {
           easing: 'easeOutExpo',
           delay: 200,
         });
-      }
-      if (ampRef.current) {
+      if (ampRef.current)
         anime({
           targets: ampRef.current,
           opacity: [0, 1],
@@ -3263,8 +3881,7 @@ export default function WeddingInvitation() {
           easing: 'easeOutBack',
           delay: 900,
         });
-      }
-      if (brideRef.current) {
+      if (brideRef.current)
         anime({
           targets: brideRef.current,
           clipPath: ['inset(0 0% 0 100%)', 'inset(0 0% 0 0%)'],
@@ -3273,7 +3890,6 @@ export default function WeddingInvitation() {
           easing: 'easeOutExpo',
           delay: 1200,
         });
-      }
     }, 300);
   }, [opened, anime]);
 
@@ -3281,24 +3897,28 @@ export default function WeddingInvitation() {
     <div
       style={{
         minHeight: '100dvh',
+        width: '100vw',
+        maxWidth: '100vw',
+        overflowX: 'hidden',
         background:
           'linear-gradient(160deg,#1a0c12 0%,#2c1420 40%,#1e0e18 75%,#100810 100%)',
         fontFamily: "'Cormorant Garamond',serif",
-        overflowX: 'hidden',
       }}
     >
-      {/* ── GLOBAL STYLES ── */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Great+Vibes&family=Jost:wght@200;300;400;500&display=swap');
-        *,*::before,*::after{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-        html,body{margin:0;padding:0;-webkit-font-smoothing:antialiased}
+        *,*::before,*::after{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0}
+        html,body{margin:0;padding:0;width:100%;max-width:100%;-webkit-font-smoothing:antialiased;overflow-x:hidden}
         @keyframes petalRise{0%{transform:translateY(110dvh) rotate(0deg) translateX(0);opacity:0}8%{opacity:.45}50%{transform:translateY(50dvh) rotate(180deg) translateX(28px)}92%{opacity:.3}100%{transform:translateY(-10dvh) rotate(360deg) translateX(-22px);opacity:0}}
         @keyframes goldShine{0%{background-position:-300% center}100%{background-position:300% center}}
         @keyframes tapPulse{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-8px) scale(1.04)}}
         @keyframes cardFloat{0%,100%{transform:translateY(0) rotate(-.4deg)}50%{transform:translateY(-12px) rotate(.4deg)}}
-        @keyframes countdownFlash{0%{color:#f5de8a;text-shadow:0 0 20px rgba(212,175,112,.8)}100%{color:inherit;text-shadow:none}}
         @keyframes shimmer{0%,100%{opacity:.5}50%{opacity:1}}
         @keyframes bgPulse{0%,100%{opacity:.15}50%{opacity:.28}}
+        @keyframes glowPulse{0%,100%{box-shadow:0 0 30px rgba(212,175,112,.2),0 70px 140px rgba(0,0,0,.6)}50%{box-shadow:0 0 80px rgba(212,175,112,.5),0 70px 140px rgba(0,0,0,.6),0 0 120px rgba(212,175,112,.2)}}
+        @keyframes circleReveal{to{stroke-dashoffset:0}}
+        @keyframes popIn{0%{transform:scale(0) rotate(-20deg);opacity:0}70%{transform:scale(1.15) rotate(5deg)}100%{transform:scale(1) rotate(0deg);opacity:1}}
+        @keyframes floatBob{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-10px) rotate(5deg)}}
         .gold-text{background:linear-gradient(90deg,#c8a44a 0%,#f5de8a 30%,#e8c060 50%,#f5de8a 70%,#c8a44a 100%);background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShine 5s linear infinite}
         .shimmer{animation:shimmer 3s ease-in-out infinite}
         .card-float{animation:cardFloat 5s ease-in-out infinite}
@@ -3309,8 +3929,6 @@ export default function WeddingInvitation() {
       `}</style>
 
       <Petals />
-
-      {/* Particle burst container */}
       <div
         ref={particleContainerRef}
         style={{
@@ -3322,9 +3940,7 @@ export default function WeddingInvitation() {
         }}
       />
 
-      {/* ══════════════════════════════════════════════════════
-          HERO — FULL SCREEN
-      ══════════════════════════════════════════════════════ */}
+      {/* HERO */}
       {!opened && (
         <section
           style={{
@@ -3340,7 +3956,6 @@ export default function WeddingInvitation() {
             overflow: 'hidden',
           }}
         >
-          {/* ambient radial glow */}
           <div
             style={{
               position: 'absolute',
@@ -3356,7 +3971,6 @@ export default function WeddingInvitation() {
               animation: 'bgPulse 4s ease-in-out infinite',
             }}
           />
-
           <div
             ref={heroRef}
             style={{
@@ -3368,7 +3982,6 @@ export default function WeddingInvitation() {
               maxWidth: 440,
             }}
           >
-            {/* top label */}
             <p
               className='shimmer'
               style={{
@@ -3383,8 +3996,6 @@ export default function WeddingInvitation() {
             >
               A Wedding Invitation
             </p>
-
-            {/* ── THE CARD ── */}
             {cardPhase !== 'done' && (
               <div
                 ref={cardRef}
@@ -3400,7 +4011,6 @@ export default function WeddingInvitation() {
                   WebkitUserSelect: 'none',
                 }}
               >
-                {/* card aspect ratio box */}
                 <div
                   style={{
                     position: 'relative',
@@ -3408,7 +4018,6 @@ export default function WeddingInvitation() {
                     transformStyle: 'preserve-3d',
                   }}
                 >
-                  {/* ── BACK / BASE LAYER ── */}
                   <div
                     style={{
                       position: 'absolute',
@@ -3417,7 +4026,7 @@ export default function WeddingInvitation() {
                       background:
                         'linear-gradient(145deg,#521826 0%,#3e1020 55%,#2e0c18 100%)',
                       boxShadow:
-                        '0 60px 120px rgba(0,0,0,.75), 0 0 0 1px rgba(212,175,112,.2)',
+                        '0 60px 120px rgba(0,0,0,.75),0 0 0 1px rgba(212,175,112,.2)',
                       overflow: 'hidden',
                     }}
                   >
@@ -3481,7 +4090,6 @@ export default function WeddingInvitation() {
                         border: '1px solid rgba(212,175,112,.08)',
                       }}
                     />
-                    {/* corner roses */}
                     <div style={{ position: 'absolute', top: 8, left: 8 }}>
                       <RoseIcon s={42} op={0.28} />
                     </div>
@@ -3515,7 +4123,6 @@ export default function WeddingInvitation() {
                     >
                       <RoseIcon s={42} op={0.28} />
                     </div>
-                    {/* diamond bottom strip */}
                     <div
                       style={{
                         position: 'absolute',
@@ -3534,7 +4141,6 @@ export default function WeddingInvitation() {
                         <Diamond key={i} size={6} opacity={0.28} />
                       ))}
                     </div>
-                    {/* center label */}
                     <div
                       style={{
                         position: 'absolute',
@@ -3578,8 +4184,6 @@ export default function WeddingInvitation() {
                       </p>
                     </div>
                   </div>
-
-                  {/* ── LEFT PAGE (flips open) ── */}
                   <div
                     ref={leftPageRef}
                     style={{
@@ -3682,7 +4286,6 @@ export default function WeddingInvitation() {
                     >
                       <RoseIcon s={42} op={0.26} />
                     </div>
-                    {/* spine edge glow */}
                     <div
                       style={{
                         position: 'absolute',
@@ -3809,8 +4412,6 @@ export default function WeddingInvitation() {
                       ))}
                     </div>
                   </div>
-
-                  {/* ── RIGHT HALF (stays, shows inner content peeking) ── */}
                   <div
                     ref={rightPageRef}
                     style={{
@@ -3823,8 +4424,6 @@ export default function WeddingInvitation() {
                 </div>
               </div>
             )}
-
-            {/* tap hint */}
             {cardPhase === 'idle' && (
               <p
                 style={{
@@ -3845,12 +4444,9 @@ export default function WeddingInvitation() {
         </section>
       )}
 
-      {/* ══════════════════════════════════════════════════════
-          OPENED — full content
-      ══════════════════════════════════════════════════════ */}
       {opened && (
         <>
-          {/* ── NAMES (full-screen panel) ── */}
+          {/* NAMES */}
           <section
             ref={namesRef}
             style={{
@@ -3866,10 +4462,9 @@ export default function WeddingInvitation() {
               textAlign: 'center',
               overflow: 'hidden',
               background:
-                'linear-gradient(180deg, rgba(80,10,30,0.18) 0%, transparent 40%, rgba(80,10,30,0.18) 100%)',
+                'linear-gradient(180deg,rgba(80,10,30,0.18) 0%,transparent 40%,rgba(80,10,30,0.18) 100%)',
             }}
           >
-            {/* top border accent line */}
             <div
               style={{
                 position: 'absolute',
@@ -3881,7 +4476,6 @@ export default function WeddingInvitation() {
                   'linear-gradient(to right,transparent,rgba(212,175,112,.35),rgba(212,175,112,.6),rgba(212,175,112,.35),transparent)',
               }}
             />
-            {/* bottom border accent line */}
             <div
               style={{
                 position: 'absolute',
@@ -3893,8 +4487,6 @@ export default function WeddingInvitation() {
                   'linear-gradient(to right,transparent,rgba(212,175,112,.35),rgba(212,175,112,.6),rgba(212,175,112,.35),transparent)',
               }}
             />
-
-            {/* giant bg rose */}
             <div
               style={{
                 position: 'absolute',
@@ -3908,7 +4500,6 @@ export default function WeddingInvitation() {
             >
               <RoseIcon s={Math.min(620, window.innerWidth * 1.3)} op={1} />
             </div>
-            {/* twin glows */}
             <div
               style={{
                 position: 'absolute',
@@ -3937,7 +4528,6 @@ export default function WeddingInvitation() {
                 pointerEvents: 'none',
               }}
             />
-
             <Reveal dir='scale'>
               <p
                 style={{
@@ -3956,8 +4546,6 @@ export default function WeddingInvitation() {
                 ✦ &nbsp; You Are Invited &nbsp; ✦
               </p>
             </Reveal>
-
-            {/* GROOM — textTransform uppercase forces capital A */}
             <div
               ref={groomRef}
               style={{
@@ -3976,7 +4564,6 @@ export default function WeddingInvitation() {
                     '0 0 100px rgba(210,80,120,.65),0 0 40px rgba(210,80,120,.3),0 6px 32px rgba(0,0,0,.65)',
                   lineHeight: 1.5,
                   margin: 0,
-
                   letterSpacing: 2,
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
@@ -4000,8 +4587,6 @@ export default function WeddingInvitation() {
                 Groom
               </p>
             </div>
-
-            {/* ampersand */}
             <div
               ref={ampRef}
               style={{ opacity: 0, margin: 'clamp(20px,5vw,36px) 0' }}
@@ -4021,8 +4606,6 @@ export default function WeddingInvitation() {
               </p>
               <GoldLine w={Math.min(80, window.innerWidth * 0.14)} />
             </div>
-
-            {/* BRIDE */}
             <div
               ref={brideRef}
               style={{
@@ -4064,7 +4647,6 @@ export default function WeddingInvitation() {
                 Bride
               </p>
             </div>
-
             <Reveal delay={1.6}>
               <p
                 style={{
@@ -4082,8 +4664,6 @@ export default function WeddingInvitation() {
                 Are Getting Married · April 5, 2026
               </p>
             </Reveal>
-
-            {/* Scroll cue */}
             <Reveal delay={2}>
               <div
                 style={{
@@ -4119,12 +4699,13 @@ export default function WeddingInvitation() {
             </Reveal>
           </section>
 
-          {/* ══ SECTION LABEL HELPER ══ */}
-          {/* ── DATE CARD ── */}
+          {/* DATE */}
           <section
             style={{
               position: 'relative',
               zIndex: 10,
+              width: '100vw',
+              boxSizing: 'border-box',
               padding: 'clamp(64px,14vw,100px) 20px',
               background:
                 'linear-gradient(180deg,rgba(20,5,14,0.7) 0%,rgba(55,14,30,0.45) 50%,rgba(20,5,14,0.7) 100%)',
@@ -4351,56 +4932,23 @@ export default function WeddingInvitation() {
                 <div style={{ margin: '22px 0' }}>
                   <GoldLine w={44} />
                 </div>
-                {/* <div
-                  style={{ display: 'flex', justifyContent: 'space-around' }}
-                >
-                  {[
-                    ['Dress Code', 'Black Tie'],
-                    ['RSVP By', 'Mar 20, 2026'],
-                  ].map(([l, v]) => (
-                    <div key={l}>
-                      <p
-                        style={{
-                          fontFamily: "'Jost',sans-serif",
-                          fontSize: 9,
-                          letterSpacing: '.3em',
-                          color: 'rgba(212,175,112,.4)',
-                          textTransform: 'uppercase',
-                          marginBottom: 6,
-                          marginTop: 0,
-                        }}
-                      >
-                        {l}
-                      </p>
-                      <p
-                        style={{
-                          fontFamily: "'Cormorant Garamond',serif",
-                          fontSize: 'clamp(15px,5vw,18px)',
-                          color: 'rgba(255,215,200,.7)',
-                          margin: 0,
-                        }}
-                      >
-                        {v}
-                      </p>
-                    </div>
-                  ))}
-                </div> */}
               </div>
             </Reveal>
           </section>
 
-          {/* ── COUNTDOWN ── */}
+          {/* COUNTDOWN */}
           <section
             style={{
               position: 'relative',
               zIndex: 10,
+              width: '100vw',
+              boxSizing: 'border-box',
               padding: 'clamp(70px,15vw,110px) 20px',
               background:
                 'linear-gradient(180deg,rgba(60,10,30,0.5) 0%,rgba(80,18,42,0.35) 50%,rgba(60,10,30,0.5) 100%)',
               borderBottom: '1px solid rgba(212,175,112,.14)',
             }}
           >
-            {/* ambient glow */}
             <div
               style={{
                 position: 'absolute',
@@ -4488,11 +5036,13 @@ export default function WeddingInvitation() {
             </Reveal>
           </section>
 
-          {/* ── QUOTE ── */}
+          {/* QUOTE */}
           <section
             style={{
               position: 'relative',
               zIndex: 10,
+              width: '100vw',
+              boxSizing: 'border-box',
               padding: 'clamp(60px,14vw,90px) 28px',
               textAlign: 'center',
               background:
@@ -4543,11 +5093,13 @@ export default function WeddingInvitation() {
             </Reveal>
           </section>
 
-          {/* ── TIMELINE ── */}
+          {/* TIMELINE */}
           <section
             style={{
               position: 'relative',
               zIndex: 10,
+              width: '100vw',
+              boxSizing: 'border-box',
               padding: 'clamp(64px,14vw,100px) 20px',
               background:
                 'linear-gradient(180deg,rgba(55,14,30,0.5) 0%,rgba(70,18,36,0.35) 50%,rgba(55,14,30,0.5) 100%)',
@@ -4715,11 +5267,13 @@ export default function WeddingInvitation() {
             </div>
           </section>
 
-          {/* ── OUR STORY ── */}
+          {/* OUR STORY */}
           <section
             style={{
               position: 'relative',
               zIndex: 10,
+              width: '100vw',
+              boxSizing: 'border-box',
               padding: 'clamp(64px,14vw,100px) 20px',
               background:
                 'linear-gradient(180deg,rgba(20,5,14,0.65) 0%,rgba(45,12,28,0.4) 50%,rgba(20,5,14,0.65) 100%)',
@@ -4783,18 +5337,8 @@ export default function WeddingInvitation() {
               }}
             >
               {[
-                {
-                  label: 'Met',
-                  // year: '2019',
-                  icon: '💫',
-                  desc: 'First glance',
-                },
-                {
-                  label: 'Engaged',
-                  // year: '2025',
-                  icon: '💍',
-                  desc: 'He said yes',
-                },
+                { label: 'Met', icon: '💫', desc: 'First glance' },
+                { label: 'Engaged', icon: '💍', desc: 'He said yes' },
                 {
                   label: 'Forever',
                   year: '2026',
@@ -4868,11 +5412,13 @@ export default function WeddingInvitation() {
             </div>
           </section>
 
-          {/* ── GOOGLE MAP ── */}
+          {/* MAP */}
           <section
             style={{
               position: 'relative',
               zIndex: 10,
+              width: '100vw',
+              boxSizing: 'border-box',
               padding: 'clamp(64px,14vw,100px) 20px',
               background:
                 'linear-gradient(180deg,rgba(55,14,30,0.5) 0%,rgba(70,18,36,0.35) 50%,rgba(55,14,30,0.5) 100%)',
@@ -4961,8 +5507,6 @@ export default function WeddingInvitation() {
                       '0 0 0 1px rgba(212,175,112,.25),0 60px 120px rgba(0,0,0,.6),0 0 60px rgba(160,40,80,.12)',
                   }}
                 >
-                  {/* ↓ Replace with your real Google Maps embed URL ↓ */}
-
                   <iframe
                     title='Venue'
                     src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d244.34491812352195!2d75.6168289!3d11.5146021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba68f4d4b6bdf7b%3A0x9a6ba0109a816103!2sExcellent%20Driving%20School%20Payyoli!5e0!3m2!1sen!2sin!4v1772432022196!5m2!1sen!2sin'
@@ -4980,7 +5524,6 @@ export default function WeddingInvitation() {
                   />
                 </div>
                 <div style={{ textAlign: 'center', marginTop: 22 }}>
-                  {/* ↓ Replace href with your real venue link ↓ */}
                   <a
                     href='https://maps.app.goo.gl/63CnD2jCLCMfYhSB9'
                     target='_blank'
@@ -5028,206 +5571,16 @@ export default function WeddingInvitation() {
             </Reveal>
           </section>
 
-          {/* ── RSVP ── */}
-          <section
-            style={{
-              position: 'relative',
-              zIndex: 10,
-              padding: 'clamp(70px,15vw,110px) 20px',
-              textAlign: 'center',
-              background:
-                'linear-gradient(180deg,rgba(20,5,14,0.65) 0%,rgba(70,16,40,0.4) 50%,rgba(20,5,14,0.65) 100%)',
-            }}
-          >
-            <Reveal>
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: 14,
-                  marginBottom: 44,
-                }}
-              >
-                <div
-                  style={{
-                    height: 1,
-                    flex: 1,
-                    maxWidth: 70,
-                    background:
-                      'linear-gradient(to right,transparent,rgba(212,175,112,.45))',
-                  }}
-                />
-                <span
-                  style={{
-                    fontFamily: "'Jost',sans-serif",
-                    fontSize: 'clamp(9px,2.5vw,11px)',
-                    letterSpacing: '.5em',
-                    textTransform: 'uppercase',
-                    color: 'rgba(212,175,112,.75)',
-                    padding: '7px 18px',
-                    border: '1px solid rgba(212,175,112,.3)',
-                    borderRadius: 50,
-                    background: 'rgba(212,175,112,.06)',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  💌 &nbsp; RSVP
-                </span>
-                <div
-                  style={{
-                    height: 1,
-                    flex: 1,
-                    maxWidth: 70,
-                    background:
-                      'linear-gradient(to left,transparent,rgba(212,175,112,.45))',
-                  }}
-                />
-              </div>
-            </Reveal>
-            <Reveal dir='scale'>
-              <div
-                style={{
-                  maxWidth: 420,
-                  margin: '0 auto',
-                  borderRadius: 'clamp(20px,6vw,30px)',
-                  padding: 'clamp(36px,10vw,60px) clamp(24px,8vw,48px)',
-                  background:
-                    'linear-gradient(145deg,rgba(100,24,42,.65),rgba(55,12,24,.85))',
-                  border: '1px solid rgba(212,175,112,.26)',
-                  boxShadow:
-                    '0 0 120px rgba(140,30,65,.3),0 70px 140px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04)',
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}
-              >
-                <div
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background:
-                      'radial-gradient(ellipse at 50% 0%,rgba(200,70,100,.2) 0%,transparent 62%)',
-                    pointerEvents: 'none',
-                  }}
-                />
-                <p
-                  style={{
-                    fontFamily: "'Jost',sans-serif",
-                    fontSize: 'clamp(9px,2.5vw,10px)',
-                    letterSpacing: '.45em',
-                    textTransform: 'uppercase',
-                    color: 'rgba(212,175,112,.5)',
-                    marginBottom: 14,
-                  }}
-                >
-                  Kindly Reply
-                </p>
-                <h3
-                  style={{
-                    fontFamily: "'Great Vibes',cursive",
-                    fontSize: 'clamp(42px,13vw,60px)',
-                    color: '#f8dde8',
-                    textShadow: '0 0 60px rgba(200,80,120,.5)',
-                    lineHeight: 1.1,
-                    margin: '0 0 20px',
-                  }}
-                >
-                  Will you
-                  <br />
-                  join us?
-                </h3>
-                <div style={{ margin: '18px 0' }}>
-                  <GoldLine w={36} />
-                </div>
-                <p
-                  style={{
-                    fontFamily: "'Jost',sans-serif",
-                    fontSize: 'clamp(10px,3vw,13px)',
-                    fontWeight: 300,
-                    color: 'rgba(212,175,112,.4)',
-                    letterSpacing: '.1em',
-                    marginBottom: 32,
-                  }}
-                >
-                  Please respond by March 20, 2026
-                </p>
-                <div
-                  style={{ display: 'flex', flexDirection: 'column', gap: 14 }}
-                >
-                  <button
-                    style={{
-                      width: '100%',
-                      padding: 'clamp(15px,4.5vw,19px)',
-                      borderRadius: 50,
-                      fontFamily: "'Jost',sans-serif",
-                      fontSize: 'clamp(10px,3vw,12px)',
-                      letterSpacing: '.32em',
-                      textTransform: 'uppercase',
-                      fontWeight: 500,
-                      background:
-                        'linear-gradient(135deg,#c8a44a,#f0d485,#c8a44a)',
-                      backgroundSize: '200% auto',
-                      color: '#3a2010',
-                      border: 'none',
-                      cursor: 'pointer',
-                      boxShadow: '0 14px 40px rgba(212,175,112,.32)',
-                      transition: 'transform .2s,box-shadow .2s',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform =
-                        'translateY(-3px) scale(1.02)';
-                      e.currentTarget.style.boxShadow =
-                        '0 22px 55px rgba(212,175,112,.45)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = 'none';
-                      e.currentTarget.style.boxShadow =
-                        '0 14px 40px rgba(212,175,112,.32)';
-                    }}
-                    onTouchStart={(e) =>
-                      (e.currentTarget.style.transform = 'scale(.97)')
-                    }
-                    onTouchEnd={(e) =>
-                      (e.currentTarget.style.transform = 'none')
-                    }
-                  >
-                    ✦ Joyfully Accept ✦
-                  </button>
-                  <button
-                    style={{
-                      width: '100%',
-                      padding: 'clamp(15px,4.5vw,19px)',
-                      borderRadius: 50,
-                      fontFamily: "'Jost',sans-serif",
-                      fontSize: 'clamp(10px,3vw,12px)',
-                      letterSpacing: '.32em',
-                      textTransform: 'uppercase',
-                      background: 'transparent',
-                      color: 'rgba(212,175,112,.45)',
-                      border: '1px solid rgba(212,175,112,.2)',
-                      cursor: 'pointer',
-                      transition: 'background .25s',
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.background =
-                        'rgba(212,175,112,.08)')
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.background = 'transparent')
-                    }
-                  >
-                    Regretfully Decline
-                  </button>
-                </div>
-              </div>
-            </Reveal>
-          </section>
+          {/* ══ RSVP — ANIMATED CELEBRATION ══ */}
+          <RSVPSection anime={anime} />
 
-          {/* ── FOOTER ── */}
+          {/* FOOTER */}
           <footer
             style={{
               position: 'relative',
               zIndex: 10,
+              width: '100vw',
+              boxSizing: 'border-box',
               padding: 'clamp(50px,12vw,80px) 20px',
               textAlign: 'center',
               borderTop: '1px solid rgba(212,175,112,.1)',
