@@ -4785,13 +4785,13 @@ export default function WeddingInvitation() {
               {[
                 {
                   label: 'Met',
-                  year: '2019',
+                  // year: '2019',
                   icon: '💫',
                   desc: 'First glance',
                 },
                 {
                   label: 'Engaged',
-                  year: '2025',
+                  // year: '2025',
                   icon: '💍',
                   desc: 'He said yes',
                 },
