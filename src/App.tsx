@@ -5240,7 +5240,7 @@ export default function WeddingInvitation() {
                   justifyContent: 'center',
                   gap: 14,
                   marginBottom: 20,
-                  opacity: 0.15,
+                  opacity: 0.45,
                 }}
               >
                 <RoseIcon s={26} op={1} />
@@ -5251,7 +5251,7 @@ export default function WeddingInvitation() {
                 style={{
                   fontFamily: "'Great Vibes',cursive",
                   fontSize: 'clamp(30px,10vw,42px)',
-                  color: 'rgba(212,175,112,.28)',
+                  color: 'rgba(212,175,112,.71)',
                   margin: '0 0 10px',
                 }}
               >
@@ -5272,7 +5272,7 @@ export default function WeddingInvitation() {
                   fontSize: 'clamp(9px,2.5vw,11px)',
                   letterSpacing: '.5em',
                   textTransform: 'uppercase',
-                  color: 'rgba(212,175,112,.18)',
+                  color: 'rgba(212,175,112,.71)',
                   margin: 0,
                 }}
               >
