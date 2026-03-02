@@ -4935,7 +4935,7 @@ export default function WeddingInvitation() {
                   marginTop: 0,
                 }}
               >
-                Villa Rosa Ballroom
+                Villa Nediyachalil
               </p>
               <p
                 style={{
