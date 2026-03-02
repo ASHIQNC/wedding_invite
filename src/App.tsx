@@ -3984,7 +3984,7 @@ export default function WeddingInvitation() {
                   maxWidth: '100%',
                 }}
               >
-                Ashiq Rahman
+                Ashiq rahman
               </h1>
               <p
                 style={{
@@ -4048,7 +4048,7 @@ export default function WeddingInvitation() {
                   maxWidth: '100%',
                 }}
               >
-                Shamida
+                shamida
               </h1>
               <p
                 style={{
@@ -4334,7 +4334,7 @@ export default function WeddingInvitation() {
                     marginTop: 0,
                   }}
                 >
-                  The Grand Ballroom at Villa Rosa
+                  The Grand Ballroom at Villa Nediyachalil
                 </p>
                 <p
                   style={{
@@ -5255,7 +5255,7 @@ export default function WeddingInvitation() {
                   margin: '0 0 10px',
                 }}
               >
-                Ashiq &amp; Shamida
+                Ashiq &amp; shamida
               </p>
               <div
                 style={{
