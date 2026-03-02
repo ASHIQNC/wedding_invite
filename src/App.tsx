@@ -4351,7 +4351,7 @@ export default function WeddingInvitation() {
                 <div style={{ margin: '22px 0' }}>
                   <GoldLine w={44} />
                 </div>
-                <div
+                {/* <div
                   style={{ display: 'flex', justifyContent: 'space-around' }}
                 >
                   {[
@@ -4384,7 +4384,7 @@ export default function WeddingInvitation() {
                       </p>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             </Reveal>
           </section>
