@@ -2647,7 +2647,7 @@ function useReveal(threshold = 0.12) {
   }, []);
   return [ref, on];
 }
-function Reveal({ children, delay = 0, dir = 'up', className = '' }) {
+function Reveal({ children, delay = 0, dir = 'up', className = '' }: any) {
   const [ref, on] = useReveal();
   const t = {
     up: on ? 'translateY(0)' : 'translateY(52px)',
